@@ -9,3 +9,18 @@ Question 1 : Y-a t-il des données partagées ? Lesquelles ?
 Question 2 : Soit nbthreads le nb de threads du Pool. A combien fixez vous nbthreads et pourquoi ?
 
 2)On pourrait configurer le nombre de thread a 18 (nombre d'url dans la liste) pour pouvoir executer toutes les url en même temps.
+
+2. ExecutorService, Callable et FutureTask
+
+Question 1 : Quelle est la solution que vous avez retenue pour effectuer la tache "addition de bananes"?
+
+1) J'ai utilisé la classe Future qui permet de récupérer l'object retournée par un callable. Puis j'ai additionner à l'attribut de la classe Ramasseur.
+
+Question 2 : Le rédacteur de ce TP va supposer que vous avez suivi le cours et l'avez ouvert. De ce fait, la collection a été implantée pour garantir l'exclusion mutuelle :-).Quels sont les changements à apporter ?
+
+2) On pourrait utiliser une ArrayBLocingQueue pour  permettre l'exclusion mutelle.
+
+Question 3 : On veut maintenant que les singes injectent dans la collection non pas un nombre, mais une collection de Bananes (On a donc une classe Banane).
+             Quelle collection prendre ? Est-elle ThreadSafe ?
+
+3) On utlise l'ArrayBlockQueue qui est ThreadSafe.
