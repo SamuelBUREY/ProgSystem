@@ -1,0 +1,11 @@
+TP3 Prog System
+
+1. ExecutorService et Runnable
+
+Question 1 : Y-a t-il des données partagées ? Lesquelles ?
+
+1) Non  il n'y a aucune données partagée car  pour chaque thread nous avons besoin uniquement d'un string pour l'url.
+
+Question 2 : Soit nbthreads le nb de threads du Pool. A combien fixez vous nbthreads et pourquoi ?
+
+2)On pourrait configurer le nombre de thread a 18 (nombre d'url dans la liste) pour pouvoir executer toutes les url en même temps.
